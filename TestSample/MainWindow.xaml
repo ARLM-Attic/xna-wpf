@@ -1,7 +1,7 @@
 ﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:TestSample_Controls="clr-namespace:TestSample.Controls" xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="TestSample.MainWindow"
+        xmlns:TestSample_Controls="clr-namespace:TestSample.Controls" xmlns:ec="http://schemas.microsoft.com/expression/2010/controls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="TestSample.MainWindow"
         Title="MainWindow" Height="437" Width="623">
     <Grid>
     	<Grid.RowDefinitions>
@@ -10,15 +10,25 @@
     		<RowDefinition Height="0.206*"/>
     	</Grid.RowDefinitions>
     	<Grid.ColumnDefinitions>
-    		<ColumnDefinition Width="0.675*"/>
-    		<ColumnDefinition Width="0.325*"/>
+    		<ColumnDefinition Width="0.03*"/>
+    		<ColumnDefinition Width="0.645*"/>
+    		<ColumnDefinition Width="0.053*"/>
+    		<ColumnDefinition Width="0.254*"/>
+    		<ColumnDefinition Width="0.018*"/>
     	</Grid.ColumnDefinitions>
         
-    	<TestSample_Controls:XnaViewControl Grid.Row="1">
-    		<TestSample_Controls:XnaViewControl.Effect>
-    			<ee:RippleEffect/>
-    		</TestSample_Controls:XnaViewControl.Effect>
-    	</TestSample_Controls:XnaViewControl>
+    	<ScrollViewer Grid.Column="3" Margin="0,0,0,8" Grid.RowSpan="3" ScrollViewer.VerticalScrollBarVisibility="Auto">
+    		<StackPanel ScrollViewer.HorizontalScrollBarVisibility="Visible" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True">
+    			<Image Source="{Binding Source, ElementName=xnaViewControl}" Margin="0,10,0,0"/>
+    			<Image Source="{Binding Source, ElementName=xnaViewControl}" Margin="0,10,0,0"/>
+    			<Image Source="{Binding Source, ElementName=xnaViewControl}" Margin="0,10,0,0"/>
+    			<Image Source="{Binding Source, ElementName=xnaViewControl}" Margin="0,10,0,0"/>
+    			<Image Source="{Binding Source, ElementName=xnaViewControl}" Margin="0,10,0,0"/>
+    			<Image Source="{Binding Source, ElementName=xnaViewControl}" Margin="0,10,0,0"/>
+    		</StackPanel>
+    	</ScrollViewer>
+        
+    	<TestSample_Controls:XnaViewControl x:Name="xnaViewControl" Grid.Row="1" Grid.Column="1"/>
         
     </Grid>
 </Window>
