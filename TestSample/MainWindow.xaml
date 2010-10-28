@@ -1,0 +1,24 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:TestSample_Controls="clr-namespace:TestSample.Controls" xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="TestSample.MainWindow"
+        Title="MainWindow" Height="437" Width="623">
+    <Grid>
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="0.085*"/>
+    		<RowDefinition Height="0.709*"/>
+    		<RowDefinition Height="0.206*"/>
+    	</Grid.RowDefinitions>
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="0.675*"/>
+    		<ColumnDefinition Width="0.325*"/>
+    	</Grid.ColumnDefinitions>
+        
+    	<TestSample_Controls:XnaViewControl Grid.Row="1">
+    		<TestSample_Controls:XnaViewControl.Effect>
+    			<ee:RippleEffect/>
+    		</TestSample_Controls:XnaViewControl.Effect>
+    	</TestSample_Controls:XnaViewControl>
+        
+    </Grid>
+</Window>
