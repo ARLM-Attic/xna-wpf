@@ -22,7 +22,7 @@ namespace XNAPF {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace XNAPF {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("XNAPF.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace XNAPF {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -60,7 +60,7 @@ namespace XNAPF {
             }
         }
         
-        internal static System.Drawing.Bitmap logoXna {
+        public static System.Drawing.Bitmap logoXna {
             get {
                 object obj = ResourceManager.GetObject("logoXna", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -70,7 +70,7 @@ namespace XNAPF {
         /// <summary>
         ///   Looks up a localized string similar to The game must implement IXnapfGame.
         /// </summary>
-        internal static string XnaIsNotIXnapfGame {
+        public static string XnaIsNotIXnapfGame {
             get {
                 return ResourceManager.GetString("XnaIsNotIXnapfGame", resourceCulture);
             }
