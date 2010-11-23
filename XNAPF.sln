@@ -9,11 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XnaGame", "XnaGame\XnaGame\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XnaGameContent", "XnaGame\XnaGameContent\XnaGameContent.contentproj", "{7E9A21A5-A918-4447-97FC-55852A4AD342}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "XNAPFSetup", "XNAPFSetup\XNAPFSetup.vdproj", "{789BC351-88F5-47EC-B17F-AEDAD4784F40}"
-EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
+		SccNumberOfProjects = 5
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs19
 		SccLocalPath0 = .
@@ -29,9 +27,6 @@ Global
 		SccProjectUniqueName4 = XnaGame\\XnaGameContent\\XnaGameContent.contentproj
 		SccProjectName4 = XnaGame/XnaGameContent
 		SccLocalPath4 = XnaGame\\XnaGameContent
-		SccProjectUniqueName5 = XNAPFSetup\\XNAPFSetup.vdproj
-		SccProjectName5 = XNAPFSetup
-		SccLocalPath5 = XNAPFSetup
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +58,7 @@ Global
 		{C0968140-4390-4CE5-A55B-156E668A82EA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C0968140-4390-4CE5-A55B-156E668A82EA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C0968140-4390-4CE5-A55B-156E668A82EA}.Release|x86.ActiveCfg = Release|Any CPU
+		{C0968140-4390-4CE5-A55B-156E668A82EA}.Release|x86.Build.0 = Release|Any CPU
 		{6CB53C6A-3EC2-41EE-8C16-E2C2E7E723D1}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{6CB53C6A-3EC2-41EE-8C16-E2C2E7E723D1}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{6CB53C6A-3EC2-41EE-8C16-E2C2E7E723D1}.Debug|Mixed Platforms.Build.0 = Debug|x86
@@ -79,14 +75,6 @@ Global
 		{7E9A21A5-A918-4447-97FC-55852A4AD342}.Release|Any CPU.ActiveCfg = Release|x86
 		{7E9A21A5-A918-4447-97FC-55852A4AD342}.Release|Mixed Platforms.ActiveCfg = Release|x86
 		{7E9A21A5-A918-4447-97FC-55852A4AD342}.Release|x86.ActiveCfg = Release|x86
-		{789BC351-88F5-47EC-B17F-AEDAD4784F40}.Debug|Any CPU.ActiveCfg = Debug
-		{789BC351-88F5-47EC-B17F-AEDAD4784F40}.Debug|Mixed Platforms.ActiveCfg = Debug
-		{789BC351-88F5-47EC-B17F-AEDAD4784F40}.Debug|Mixed Platforms.Build.0 = Debug
-		{789BC351-88F5-47EC-B17F-AEDAD4784F40}.Debug|x86.ActiveCfg = Debug
-		{789BC351-88F5-47EC-B17F-AEDAD4784F40}.Debug|x86.Build.0 = Debug
-		{789BC351-88F5-47EC-B17F-AEDAD4784F40}.Release|Any CPU.ActiveCfg = Release
-		{789BC351-88F5-47EC-B17F-AEDAD4784F40}.Release|Mixed Platforms.ActiveCfg = Release
-		{789BC351-88F5-47EC-B17F-AEDAD4784F40}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
