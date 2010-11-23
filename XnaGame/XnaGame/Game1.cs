@@ -110,12 +110,12 @@ namespace XnaGame
                 _mesh.Draw();
             }
 
-            spriteBatch.Begin(SpriteSortMode.Texture, BlendState.Opaque);
-            spriteBatch.Draw(m_logo, new Rectangle(0, 0,
-                                                  (int)(this.graphics.PreferredBackBufferWidth * 0.30f),
-                                                  (int)(this.graphics.PreferredBackBufferHeight * 0.50f)),
-                                                  Color.White);
-            spriteBatch.End();
+            //spriteBatch.Begin(SpriteSortMode.Texture, BlendState.Opaque);
+            //spriteBatch.Draw(m_logo, new Rectangle(0, 0,
+            //                                      (int)(this.graphics.PreferredBackBufferWidth * 0.30f),
+            //                                      (int)(this.graphics.PreferredBackBufferHeight * 0.50f)),
+            //                                      Color.White);
+            //spriteBatch.End();
 
             base.Draw(gameTime);
         }

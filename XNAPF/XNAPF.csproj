@@ -55,7 +55,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IXnapfGame.cs" />
+    <Compile Include="IXnapfGameResizeable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RenderTargetHelper.cs" />
     <Compile Include="Resources.Designer.cs">

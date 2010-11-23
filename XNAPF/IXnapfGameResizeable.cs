@@ -5,9 +5,8 @@ using System.Text;
 
 namespace XNAPF
 {
-    public interface IXnapfGame
+    public interface IXnapfGameResizeable
     {
-        void IntializeData();
         void Resize(double width, double height);
     }
 }

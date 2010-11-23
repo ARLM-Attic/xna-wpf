@@ -19,7 +19,7 @@ using System.Drawing;
 namespace XNAPF
 {
     public class XnaImage<T> : System.Windows.Controls.Image, INotifyPropertyChanged
-        where T : Game, IXnapfGame, new()
+        where T : Game, new()
     {
         #region Fields
 
@@ -43,6 +43,7 @@ namespace XNAPF
         private Int32Rect m_rect;
 
         private static FieldInfo m_isActive;
+        private static MethodInfo m_initialize;
 
         private bool m_drawing = false;
 
@@ -69,6 +70,7 @@ namespace XNAPF
         static XnaImage()
         {
             m_isActive = typeof(Game).GetField("isActive", BindingFlags.NonPublic | BindingFlags.Instance);
+            m_initialize = typeof(Game).GetMethod("Initialize", BindingFlags.NonPublic | BindingFlags.Instance);
         }
 
         public XnaImage()
@@ -81,7 +83,7 @@ namespace XNAPF
                 base.Stretch = System.Windows.Media.Stretch.Fill;
                 return;
             }
-            
+
             InitializeNewGame();
         }
 
@@ -100,8 +102,6 @@ namespace XNAPF
                 m_manager.IsFullScreen = false;
                 m_manager.ApplyChanges();
             }
-            Game.IntializeData();
-
 
             m_width = Game.GraphicsDevice.Viewport.Width;
             m_height = Game.GraphicsDevice.Viewport.Height;
@@ -133,8 +133,8 @@ namespace XNAPF
                 while (!m_drawing)
                     Thread.Sleep(1);
                 ResizeGame(m_width, m_height);
-                m_target = new RenderTarget2D(Game.GraphicsDevice, m_width, m_height);
-                m_current = new RenderTarget2D(Game.GraphicsDevice, m_width, m_height);
+                m_target = new RenderTarget2D(Game.GraphicsDevice, m_width, m_height, false, SurfaceFormat.Color, DepthFormat.Depth24Stencil8);
+                m_current = new RenderTarget2D(Game.GraphicsDevice, m_width, m_height, false, SurfaceFormat.Color, DepthFormat.Depth24Stencil8);
                 m_rect = new Int32Rect(m_target.Bounds.X, m_target.Bounds.Y, m_target.Bounds.Width, m_target.Bounds.Height);
             };
 
@@ -161,6 +161,8 @@ namespace XNAPF
 
             m_back.DoWork += (e, a) =>
             {
+                m_initialize.Invoke(this.Game, new object[] { });
+
                 DateTime _save = DateTime.Now;
                 while (m_running)
                 {
@@ -257,7 +259,8 @@ namespace XNAPF
 
         public virtual void ResizeGame(int _newWidth, int _newHeitgh)
         {
-            Game.Resize(_newWidth, _newHeitgh);
+            if (Game is IXnapfGameResizeable)
+                (Game as IXnapfGameResizeable).Resize(_newWidth, _newHeitgh);
         }
         #endregion
     }

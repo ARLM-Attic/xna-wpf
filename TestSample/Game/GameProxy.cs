@@ -7,7 +7,7 @@ using XNAPF;
 
 namespace TestSample.Game
 {
-    public class GameProxy : Game1, IXnapfGame
+    public class GameProxy : Game1, IXnapfGameResizeable
     {
         public void IntializeData()
         {
