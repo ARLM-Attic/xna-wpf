@@ -8,7 +8,7 @@ using TestSample.Game;
 
 namespace TestSample.Controls
 {
-    public class XnaViewControl : XnaImage<GameProxy>
+    public class XnaViewControl : XnaImage<Game1>
     {
     }
 }

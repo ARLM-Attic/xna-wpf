@@ -38,6 +38,7 @@ namespace XnaGame
         {
             // TODO: Add your initialization logic here
 
+            graphics.PreferMultiSampling = true;
             base.Initialize();
         }
 
@@ -87,7 +88,7 @@ namespace XnaGame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            m_rot += (float)(MathHelper.ToRadians(45) * gameTime.ElapsedGameTime.TotalSeconds);
+            m_rot += (float)(MathHelper.ToRadians(90) * gameTime.ElapsedGameTime.TotalSeconds);
 
 
             base.Update(gameTime);
